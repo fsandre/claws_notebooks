@@ -1,6 +1,6 @@
 name: claws-environment
 channels:
-  - fsandre
+  - conda-forge
 dependencies:
   - numpy
   - psutil
