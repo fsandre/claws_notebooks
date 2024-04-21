@@ -38,6 +38,7 @@ def aoa_fb_analysis(ss_ol_elev=None, **kwargs):
     axs[1,1].plot(T, 180/np.pi*yout[ss_cl.output_index['theta_rad']][0])
     axs[1,1].grid(True)
     axs[1,1].set_title('Theta[deg]')
+    plt.show()
 
 def aoa_sensitivity_kv(ss_ol=None, kv_range=[0.0, 0.04], **kwargs):
     gain_range = np.arange(start=kv_range[0], stop=kv_range[1], step=(kv_range[1]-kv_range[0])/5.0)
@@ -86,3 +87,4 @@ def aoa_sensitivity_kv(ss_ol=None, kv_range=[0.0, 0.04], **kwargs):
     axs[0,0].text(-0.9*max_wn, -1.1*y_wn_0_7, r'$\zeta = 0.7$', fontsize=10, color='grey')
     axs[0,0].grid(True)
     axs[0,1].legend(legend_str, bbox_to_anchor=(1.02, 1), loc='upper left', borderaxespad=0)
+    plt.show()
